@@ -2,7 +2,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 import torch
 import pickle
-from model import GCL
+from model import ANAGL
 from utils import metrics, scipy_sparse_mat_to_torch_sparse_tensor
 import pandas as pd
 from parser import args
