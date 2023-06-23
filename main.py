@@ -12,7 +12,6 @@ import os
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
-# hyperparameters
 d = args.d
 l = args.gnn_layer
 temp = args.temp
@@ -26,11 +25,9 @@ dropout = args.dropout
 lr = args.lr
 svd_q = args.q
 
-# load data  A 
 path = 'data/' + args.data + '/'
 f = open(path+'trnMat.pkl','rb')
 train = pickle.load(f)
-#train_np = train.toarray()
 train_csr = (train!=0).astype(np.float32)
 f = open(path+'tstMat.pkl','rb')
 test = pickle.load(f)
