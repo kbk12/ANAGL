@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from utils import sparse_dropout, spmm
-class GCL(nn.Module):
+class ANAGL(nn.Module):
     def __init__(self, n_u, n_i, n_u_A, n_i_A, d, u_mul_s, v_mul_s, u_mul_s_A, v_mul_s_A, ut, vt, ut_A, vt_A, train_csr, train_csr_A, adj_norm, \
                 adj_norm_A, l, temp, lambda_1, lambda_2, lambda_3, dropout, batch_user):
         self.E_u_0 = nn.Parameter(nn.init.xavier_uniform_(torch.empty(n_u,d)))
