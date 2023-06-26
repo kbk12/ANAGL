@@ -84,7 +84,7 @@ recall_20_y = []
 ndcg_20_y = []
 recall_40_y = []
 ndcg_40_y = []
-model = GCL(adj_norm.shape[0], adj_norm.shape[1], adj_norm_A.shape[0], adj_norm_A.shape[1], d, u_mul_s, v_mul_s, u_mul_s_A, v_mul_s_A, \
+model = ANAGL(adj_norm.shape[0], adj_norm.shape[1], adj_norm_A.shape[0], adj_norm_A.shape[1], d, u_mul_s, v_mul_s, u_mul_s_A, v_mul_s_A, \
                 svd_u.T, svd_v.T, svd_u_A.T, svd_v_A.T, train_csr, train_csr_A, adj_norm, adj_norm_A, l, temp, lambda_1, lambda_2, lambda_3, dropout, batch_user )
 model.cuda()
 optimizer = torch.optim.Adam(model.parameters(),weight_decay=lambda_2,lr=lr)
